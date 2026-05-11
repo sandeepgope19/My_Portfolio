@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built using **HTML, CSS, JavaScr
 
 ## Live Demo
 🔗 Add your deployed portfolio link here  
-Example: `https://your-portfolio.netlify.app`
+Example: `https://sandeep-gope.netlify.app`
 
 ---
 
@@ -115,7 +115,6 @@ This portfolio can be hosted on platforms like:
 
 - GitHub Pages
 - Netlify
-- Vercel
 
 ---
 
@@ -124,8 +123,10 @@ This portfolio can be hosted on platforms like:
 **Sandeep Gope**
 
 📧 sandeepgope19@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/sandeep-gope-3b7a52296/  
-💻 GitHub: https://github.com/sandeepgope19  
+🔗 LinkedIn 
+💻 GitHub
+📷 Instagram
+✖️ Twitter
 
 ---
 
