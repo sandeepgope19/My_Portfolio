@@ -75,10 +75,16 @@ body::after{
    NAV
 ===================================================== */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:9999;
   height:68px;
   padding:0 32px;
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   background-color:#f0f0f0;
   border-bottom:none;
 }
@@ -548,7 +554,6 @@ footer{
     <a href="#about">About</a><a href="#skills">Skills</a>
     <a href="#experience">Experience</a><a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="https://drive.google.com/file/d/1H3kY4os9HYGZfcB31hwBxfgE3ukozl1u/view" target="_blank">Resume</a>
     <a href="#contact" class="nav-cta">Hire Me</a>
   </div>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
@@ -565,7 +570,7 @@ footer{
         <p class="hero-desc reveal">Detail-oriented QA fresher with 6 months of Technical Support experience. Passionate about writing clean test cases, hunting bugs, and building automation skills with Selenium &amp; Postman.</p>
         <div class="hero-btns reveal">
           <a href="#projects" class="btn btn-primary"><i class="fa fa-folder-open"></i> View Projects</a>
-          <a href="https://drive.google.com/uc?export=download&id=1H3kY4os9HYGZfcB31hwBxfgE3ukozl1u" class="btn btn-outline" target="_blank" download><i class="fa fa-download"></i> Download Resume</a>
+          <a href="https://drive.google.com/file/d/1H3kY4os9HYGZfcB31hwBxfgE3ukozl1u/view" class="btn btn-outline" target="_blank"><i class="fa fa-eye"></i> View Resume</a>
           <a href="#contact" class="btn btn-outline"><i class="fa fa-envelope"></i> Contact Me</a>
         </div>
         <div class="hero-stats reveal">
@@ -950,7 +955,15 @@ toggle.addEventListener('click',()=>{
   if(navOpen){navLinks.style.cssText='display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);padding:12px 24px 20px;gap:4px;z-index:99;';}
   else{navLinks.style.display='none';}
 });
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navOpen=false;navLinks.style.display='none';}));
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    // Only hide menu on mobile
+    if (window.innerWidth <= 960) {
+      navOpen = false;
+      navLinks.style.display = 'none';
+    }
+  })
+);
 </script>
 </body>
 </html>
